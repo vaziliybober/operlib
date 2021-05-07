@@ -1,5 +1,5 @@
 {
-  "name": "operlib",
+  "name": "@vaziliybober/operlib",
   "version": "1.0.0",
   "description": "An operational transformation library",
   "main": "src/index.js",
