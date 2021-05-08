@@ -1,15 +1,16 @@
 {
   "name": "@vaziliybober/operlib",
-  "version": "1.2.0",
+  "version": "1.3.3",
   "description": "An operational transformation library",
-  "main": "src/index.js",
-  "type": "module",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npx jest --bail"
+    "test": "npx jest --bail",
+    "prepublish": "babel src --out-dir lib"
   },
-  "jest": {
-    "testEnvironment": "node",
-    "transform": {}
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
   },
   "homepage": "https://github.com/vaziliybober/operlib#readme",
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
