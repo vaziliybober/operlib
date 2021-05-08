@@ -8,11 +8,11 @@ import {
 
 import { makeAtomic } from './atomic.js';
 
-export {
-  makeOperation as make,
+export default {
+  make: makeOperation,
   makeAtomic,
-  applyOperation as apply,
-  transformOperations as transform,
-  composeOperations as compose,
-  toStringOperation as toString,
+  apply: applyOperation,
+  transform: transformOperations,
+  compose: composeOperations,
+  toString: toStringOperation,
 };
